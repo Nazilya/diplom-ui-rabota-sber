@@ -8,9 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import sber.rabota.helpers.Attach;
-
 import static com.codeborne.selenide.Configuration.baseUrl;
-
 import static com.codeborne.selenide.Selenide.open;
 
 
