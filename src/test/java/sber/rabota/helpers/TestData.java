@@ -28,7 +28,7 @@ public class TestData {
             firstName = faker.name().firstName(),
             email = faker.internet().emailAddress(),
             phone = faker.phoneNumber().subscriberNumber(10),
-            fileName = "Резюме.pdf";
+            fileName = "Rezume.docx";
 
 
 }
