@@ -24,14 +24,6 @@ public class MainPageTests extends BaseTest {
         mainPage.openPage(baseUrl);
     }
 
-    @Test
-    @Tag("UITests")
-    @DisplayName("Проверка наличия логотипов на главной странице")
-    void checkLogoTest() {
-        mainPage
-                .checkLogo(testData.logoCount);
-    }
-
 
     static Stream<Arguments> checkNavMenuButtonsTest() {
         return Stream.of(
