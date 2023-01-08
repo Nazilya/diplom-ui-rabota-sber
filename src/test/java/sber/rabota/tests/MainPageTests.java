@@ -1,5 +1,6 @@
 package sber.rabota.tests;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -12,10 +13,16 @@ import sber.rabota.pages.MainPage;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
+
 public class MainPageTests extends BaseTest {
     private MainPage mainPage = new MainPage();
     private static TestData testData = new TestData();
 
+    @BeforeEach
+    void openMainPage() {
+        mainPage.openPage(baseUrl);
+    }
 
     @Test
     @Tag("UITests")

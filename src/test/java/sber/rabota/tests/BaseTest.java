@@ -15,7 +15,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class BaseTest {
     @BeforeAll
     static void setup() {
-//        baseUrl = "https://rabota.sber.ru/";
         Configuration.baseUrl = System.getProperty("baseUrl", "https://rabota.sber.ru/");
         Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.browser = System.getProperty("browser", "chrome");
@@ -31,7 +30,6 @@ public class BaseTest {
 
     @BeforeEach
     void openMainPage() {
-        open(baseUrl);
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
