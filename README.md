@@ -12,7 +12,6 @@
 - [Сборка в Jenkins](#earth_africa-Jenkins-job)
 - [Запуск из терминала](#earth_africa-Запуск-тестов-из-терминала)
 - [Allure отчет](#earth_africa-Allure-отчет)
-- [Тест-кесы в Allure Testops](#earth_africa-Тест-кесы-в-Allure-Testops)
 - [Отчет в Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
 - [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
 
@@ -32,10 +31,11 @@
 
 ## :maple_leaf: Список проверок, реализованных в автотестах
 
-- ✓ Поиск вакансии QA Automation
-- ✓ Поиск вакансий (параметризованные тесты)
-- ✓ Поиск вакансии с использованием фильтров
-- ✓ Заполнение формы для отклика на вакансию
+✓ Проверка кликабельности элементов меню на главной станице
+✓ Поиск вакансии QA Automation
+✓ Поиск вакансий (параметризованные тесты)
+✓ Поиск вакансии с использованием фильтров
+✓ Заполнение формы для отклика на вакансию
 
 ## :maple_leaf: Запуск тестов
 
@@ -48,13 +48,14 @@ gradle clean test
 ```
 clean
 ui_tests
+-Dbase_url=${BASE_URL}
+-DremoteUrl=${REMOTE_URL}
 -Dbrowser=${BROWSER}
--Dversion=${VERSION}
--Dsize=${BROWSER_SIZE}
--Durl=${REMOTE_URL}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
 ```
 
-### <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Запуск через  <a target="_blank" href="https://jenkins.autotests.cloud/job/10_DikayaAV_diploma/"> Jenkins </a>
+### <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Запуск через  <a target="_blank" href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/"> Jenkins </a>
 
 ### :maple_leaf: Параметры сборки в Jenkins:
 
