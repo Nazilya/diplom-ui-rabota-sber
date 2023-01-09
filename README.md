@@ -8,8 +8,9 @@
 ## :maple_leaf: Содержание:
 
 - [Технологии и инструменты](#earth_africa-технологии-и-инструменты)
-- [Реализованные проверки](#earth_africa-Реализованные-проверки)
-- [Сборка в Jenkins](#earth_africa-Jenkins-job)
+- [Список проверок, реализованных в автотестах](#earth_africa-Список проверок, реализованных в автотестах)
+- [Локальный запуск тестов](#earth_africa-Локальный запуск тестов)
+- [Удаленный запуск - сборка в Jenkins](#earth_africa-Удаленный запуск - сборка в Jenkins)
 - [Allure отчет](#earth_africa-Allure-отчет)
 - [Отчет в Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
 
@@ -83,11 +84,4 @@ allure serve build/allure-results
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/telegramNotif.png" >
-</p>
-
-
-## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Видео прохождения теста
-
-<p align="center">
-<img title="Selenoid Video" src="images/video/video.gif" width="250" height="153"  alt="video"> 
 </p>
