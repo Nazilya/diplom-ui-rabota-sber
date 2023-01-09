@@ -39,7 +39,7 @@
 
 ## :maple_leaf: Запуск тестов
 
-### :maple_leaf: Локальный запуск :
+###  Локальный запуск :
 Пример командной строки:
 ```bash
 gradle clean ui_tests -Dlogin=user1 -Dpassword=1234 -DtestUrl=selenoid.autotests.cloud/wd/hub/
@@ -49,33 +49,33 @@ gradle clean ui_tests -Dlogin=user1 -Dpassword=1234 -DtestUrl=selenoid.autotests
 allure serve build/allure-results
 ```
 
-### :maple_leaf: Удаленный запуск (в Jenkins):
+###  Удаленный запуск (в Jenkins):
 #### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/">проект</a>
 
-![This is an image](/design/images/Jenkins1.png)
+![This is an image](/images/screens/Jenkins1.png)
 
 #### 2. Выбрать пункт **Собрать с параметрами**
 #### 3. В случае необходимости изменить параметры, выбрав значения из выпадающих списков
 #### 4. Нажать **Собрать**
 #### 5. Результат запуска сборки можно посмотреть в отчёте Allure
 
-![This is an image](/design/images/Jenkins2.png)
+![This is an image](/images/screens/Jenkins2.png)
 
 ## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/10_DikayaAV_diploma/allure/">Allure report</a>
 
-### :maple_leaf: Главное окно
+###  Главное окно
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/Allure_Report1.png">
 </p>
 
-### :maple_leaf: Тесты
+###  Тесты
 
 <p align="center">
 <img title="Allure Tests" src="images/screens/Allure_Report2.png">
 </p>
 
-### :maple_leaf: Графики
+###  Графики
 
 <p align="center">
 <img title="Allure Graphics" src="images/screens/Allure_Report3.png">
@@ -91,5 +91,5 @@ allure serve build/allure-results
 ## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Видео прохождения теста
 
 <p align="center">
-<img title="Selenoid Video" src="images/video/videoUItests.mp4" width="250" height="153"  alt="video"> 
+<img title="Selenoid Video" src="images/video/video.gif" width="250" height="153"  alt="video"> 
 </p>
