@@ -64,10 +64,11 @@ public class MainPageTests extends BaseTest {
 
     @Test
     @Tag("UITests")
-    @DisplayName("Проверка открытия страницы 'Карьерные медиа' по клику на меню")
+    @DisplayName("Проверка открытия страницы 'Выпускникам и студентам' по клику на меню")
     void openGraduatePageTest() {
         mainPage.clickNavMenuElementByName(testData.graduate);
         switchTo().window(1);
         Assertions.assertEquals(testData.graduateTitle, $x("//title").getAttribute("textContent"));
     }
+
 }
