@@ -40,41 +40,26 @@
 ## :maple_leaf: Запуск тестов
 
 ### :maple_leaf: Локальный запуск :
+Пример командной строки:
+```bash
+gradle clean ui_tests -Dlogin=user1 -Dpassword=1234 -DtestUrl=selenoid.autotests.cloud/wd/hub/
 ```
-gradle clean test
-```
-
-### :maple_leaf: Удаленный запуск:
-```
-clean
-ui_tests
--Dbase_url=${BASE_URL}
--DremoteUrl=${REMOTE_URL}
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
+Получение отчёта:
+```bash
+allure serve build/allure-results
 ```
 
-### <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Запуск через  <a target="_blank" href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/"> Jenkins </a>
+### :maple_leaf: Удаленный запуск (в Jenkins):
+#### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/">проект</a>
 
-### :maple_leaf: Параметры сборки в Jenkins:
+![This is an image](/design/images/Jenkins1.png)
 
-- запуск тестов с тегом ui_tests (по умолчанию)
-- browser (браузер, по умолчанию chrome)
-- version (версия браузера, по умолчанию 100.0)
-- size (размер окна браузера, по умолчанию 1920x1080)
-- remoteUrl (логин, пароль и адрес удаленного сервера selenoid)
-- BASE_URL (https://rabota.sber.ru/ - по умолчанию)
+#### 2. Выбрать пункт **Собрать с параметрами**
+#### 3. В случае необходимости изменить параметры, выбрав значения из выпадающих списков
+#### 4. Нажать **Собрать**
+#### 5. Результат запуска сборки можно посмотреть в отчёте Allure
 
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/"><img src="images/screens/Jenkins1.png" alt="Jenkins"/></a>
-</p>
-
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/10_DikayaAV_diploma/"><img src="images/screens/Jenkins2.png" alt="Jenkins"/></a>
-</p>
-
-
+![This is an image](/design/images/Jenkins2.png)
 
 ## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/10_DikayaAV_diploma/allure/">Allure report</a>
 
