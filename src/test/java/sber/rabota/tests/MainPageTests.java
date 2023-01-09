@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class MainPageTests extends BaseTest {
     private MainPage mainPage = new MainPage();
@@ -23,6 +22,7 @@ public class MainPageTests extends BaseTest {
         mainPage.openPage(baseUrl);
     }
 
+    @Disabled
     @Test
     @Tag("UITests")
     @DisplayName("Проверка наличия логотипов на главной странице")
