@@ -70,7 +70,6 @@ public class MainPageTests extends BaseTest {
         mainPage.clickNavMenuElementByName(testData.graduate);
         mainPage.openGraduatesPage();
         Assertions.assertEquals(testData.graduateTitle, $x("//title").getAttribute("textContent"));
-        mainPage.returnOnMainPage();
     }
 
 }
