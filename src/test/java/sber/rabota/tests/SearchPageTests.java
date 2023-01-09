@@ -48,5 +48,4 @@ public class SearchPageTests extends BaseTest {
                 .fillSearchField(vacansy)
                 .checkResultOfSearch(searchesResult);
     }
-
 }

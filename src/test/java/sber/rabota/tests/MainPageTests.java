@@ -1,9 +1,6 @@
 package sber.rabota.tests;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -14,6 +11,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageTests extends BaseTest {
     private MainPage mainPage = new MainPage();
@@ -24,6 +22,13 @@ public class MainPageTests extends BaseTest {
         mainPage.openPage(baseUrl);
     }
 
+    @Test
+    @Tag("UITests")
+    @DisplayName("Проверка наличия логотипов на главной странице")
+    void checkLogoTest() {
+        mainPage
+                .checkLogo(testData.logoCount);
+    }
 
     static Stream<Arguments> checkNavMenuButtonsTest() {
         return Stream.of(
@@ -41,4 +46,28 @@ public class MainPageTests extends BaseTest {
                 .checkNavMenuElements(menuElements);
     }
 
+    @Test
+    @Tag("UITests")
+    @DisplayName("Проверка открытия страницы 'Поиск вакансий' по клику на меню")
+    void openVacanciesPageTest() {
+        mainPage.clickNavMenuElementByName(testData.vacancies);
+        Assertions.assertEquals(testData.vacanciesTitle, $x("//title").getAttribute("textContent"));
+    }
+
+    @Test
+    @Tag("UITests")
+    @DisplayName("Проверка открытия страницы 'Карьерные медиа' по клику на меню")
+    void openCariersPageTest() {
+        mainPage.clickNavMenuElementByName(testData.carier);
+        Assertions.assertEquals(testData.cariersTitle, $x("//title").getAttribute("textContent"));
+    }
+
+    @Test
+    @Tag("UITests")
+    @DisplayName("Проверка открытия страницы 'Карьерные медиа' по клику на меню")
+    void openGraduatePageTest() {
+        mainPage.clickNavMenuElementByName(testData.graduate);
+        switchTo().window(1);
+        Assertions.assertEquals(testData.graduateTitle, $x("//title").getAttribute("textContent"));
+    }
 }

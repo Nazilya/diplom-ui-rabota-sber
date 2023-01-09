@@ -5,7 +5,6 @@ import sber.rabota.helpers.TestData;
 import sber.rabota.pages.MainPage;
 import sber.rabota.pages.SearchPage;
 import sber.rabota.pages.VacansiesPage;
-
 import static com.codeborne.selenide.Selenide.*;
 import static sber.rabota.helpers.TestData.errorTexts;
 

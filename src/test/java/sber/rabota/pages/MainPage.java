@@ -45,5 +45,4 @@ public class MainPage {
         menuElements.find(text(name)).click();
         return this;
     }
-
 }

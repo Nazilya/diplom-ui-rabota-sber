@@ -10,9 +10,6 @@ public class TestData {
             regionForSearch = "Санкт-Петербург",
             attribute = "innerText",
             menuElement = "Вакансии",
-            validVacansy = "QA automation",
-            negativeSearchResult = "Ничего не нашлось",
-            positiveSearchResult = "Найдено вакансий",
             vacanciesUrl = "search/4103204/";
     public int logoCount = 2,
             menuElementsCount = 3;
@@ -22,13 +19,17 @@ public class TestData {
     public static List<String> errorTexts =
             List.of("Обязательное поле ", "Обязательное поле ", "Проверьте адрес", "Это не похоже на номер телефона");
 
-    //public String invalidVacansy = RandomUtils.randomString(10);
-
     public String lastName = faker.name().lastName(),
             firstName = faker.name().firstName(),
             email = faker.internet().emailAddress(),
             phone = faker.phoneNumber().subscriberNumber(10),
             fileName = "Rezume.docx";
 
+    public String vacancies = "Вакансии",
+            vacanciesTitle = "Поиск вакансий",
+            carier = "Карьерные медиа",
+            cariersTitle = "Работа в Сбере: Карьерные медиа",
+            graduate = "Выпускникам и студентам",
+            graduateTitle = "SberGraduate - Твори будущее со Сбером";
 
 }

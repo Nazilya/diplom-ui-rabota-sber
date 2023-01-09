@@ -15,5 +15,4 @@ public class RandomUtils {
         }
         return sb.toString();
     }
-
 }

@@ -27,11 +27,6 @@ public class VacansiesPage {
         switchTo().window(1);
         return this;
     }
-    @Step("открыть вакансию")
-    public VacansiesPage switchToWindow(String title) {
-        switchTo().window(title);
-        return this;
-    }
 
     @Step("установить чекбокс согласия на обработку данных")
     public VacansiesPage clickOnСheckbox() {
