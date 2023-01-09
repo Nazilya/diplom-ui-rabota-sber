@@ -8,6 +8,7 @@ import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThanOrEqual;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class MainPage {
     private NavMenu menu = new NavMenu();
@@ -43,6 +44,16 @@ public class MainPage {
     @Step("кликнуть на элемент  меню ")
     public MainPage clickNavMenuElementByName(String name) {
         menuElements.find(text(name)).click();
+        return this;
+    }
+    @Step("перейти на соседнюю вкладку")
+    public MainPage openGraduatesPage() {
+        switchTo().window(1);
+        return this;
+    }
+    @Step("вернуться на Главную страницу")
+    public MainPage returnOnMainPage() {
+        switchTo().window(getWebDriver().getWindowHandle()).close();
         return this;
     }
 }

@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class MainPageTests extends BaseTest {
     private MainPage mainPage = new MainPage();
@@ -67,8 +68,9 @@ public class MainPageTests extends BaseTest {
     @DisplayName("Проверка открытия страницы 'Выпускникам и студентам' по клику на меню")
     void openGraduatePageTest() {
         mainPage.clickNavMenuElementByName(testData.graduate);
-        switchTo().window(1);
+        mainPage.openGraduatesPage();
         Assertions.assertEquals(testData.graduateTitle, $x("//title").getAttribute("textContent"));
+        mainPage.returnOnMainPage();
     }
 
 }
