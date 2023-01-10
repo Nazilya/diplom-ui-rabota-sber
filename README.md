@@ -58,7 +58,7 @@ allure serve build/allure-results
 #### 4. Нажать **Собрать**
 #### 5. Результат запуска сборки можно посмотреть в отчёте Allure
 
-![This is an image](/images/screens/Jenkins2.png)
+![This is an image](/images/screens/Jenkins3.png)
 
 ## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/10_DikayaAV_diploma/allure/">Allure report</a>
 
