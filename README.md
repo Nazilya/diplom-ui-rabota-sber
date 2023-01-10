@@ -41,7 +41,7 @@
 ###  Локальный запуск :
 Пример командной строки:
 ```bash
-gradle clean ui_tests -Dlogin=user1 -Dpassword=1234 -DtestUrl=selenoid.autotests.cloud/wd/hub/
+gradle clean ui_tests
 ```
 Получение отчёта:
 ```bash
