@@ -23,7 +23,7 @@ public class TestData {
             firstName = faker.name().firstName(),
             email = faker.internet().emailAddress(),
             phone = faker.phoneNumber().subscriberNumber(10),
-            fileName = "Rezume.docx";
+            fileName = "files/Rezume.docx";
 
     public String vacancies = "Вакансии",
             vacanciesTitle = "Поиск вакансий",
