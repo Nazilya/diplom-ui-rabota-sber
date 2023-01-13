@@ -90,4 +90,5 @@ allure serve build/allure-results
 
 <p align="center">
 <img title="Selenoid Video" src="images/video/videoUItests.mp4" width="250" height="153"  alt="video"> 
+<video src="https://user-images.githubusercontent.com/videoUItests.mp4"
 </p>
