@@ -89,6 +89,6 @@ allure serve build/allure-results
 ## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Видео прохождения теста
 
 <p align="center">
-<img title="Selenoid Video" src="images/video/videoUItests.mp4" width="250" height="153"  alt="video"> 
+<img title="Selenoid Video" src="https://user-images.githubusercontent.com/videoUItests.mp4" width="250" height="153"  alt="video"> 
 <video src="https://user-images.githubusercontent.com/videoUItests.mp4"
 </p>
