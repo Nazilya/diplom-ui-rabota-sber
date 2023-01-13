@@ -88,5 +88,10 @@ allure serve build/allure-results
 
 ## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Видео прохождения теста
 
+<a id="selenoid"></a>
+#### <a href="https://aerokube.com/selenoid/"><img alt="Selenoid" height="50" src="images/logo/Selenoid.svg" width="50"/>Selenoid</a>
+> *Прогон тестов на удаленном сервере*
+
 <video src="https://user-images.githubusercontent.com/81707244/212382939-5543536f-eba7-485e-93ac-28f2c69c449e.mp4"
+controls="controls" style="max-width: 730px
 </video>
