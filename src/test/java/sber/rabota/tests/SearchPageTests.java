@@ -23,7 +23,7 @@ public class SearchPageTests extends BaseTest {
     @Tag("UITests")
     @DisplayName("Проверка функции поиска вакансий по регионам")
     void checkVacanciesSearchResultsByRegionsTest() {
-        searchPage
+        searchPage.clickClearButton()
                 .fillFieldRegion(testData.regionForSearch)
                 .selectRegion()
                 .checkRegion(testData.attribute, testData.region);
@@ -33,7 +33,7 @@ public class SearchPageTests extends BaseTest {
     @Tag("UITests")
     @DisplayName("Проверка функции поиска и наличия вакансий для людей с инвалидностью")
     void checkVacanciesSearchResultsForHandicappedTest() {
-        searchPage
+        searchPage.clickClearButton()
                 .clickAccessibleForHandicappedFlag()
                 .checkAvailabilityOfVacanciesForHandicapped()
                 .checkThatTheSignsForHandicappedInVacanciesArePresent();
@@ -44,7 +44,7 @@ public class SearchPageTests extends BaseTest {
     @Tag("UITests")
     @DisplayName("Проверка функции поиска вакансий и результатов поиска")
     void checkVacansySearchResultsTest(String vacansy, String searchesResult) {
-        searchPage
+        searchPage.clickClearButton()
                 .fillSearchField(vacansy)
                 .checkResultOfSearch(searchesResult);
     }
