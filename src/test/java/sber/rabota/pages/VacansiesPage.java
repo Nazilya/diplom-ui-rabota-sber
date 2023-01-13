@@ -1,6 +1,7 @@
 package sber.rabota.pages;
 
 import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -17,7 +18,8 @@ public class VacansiesPage {
             firstName = $("input[placeholder='Имя']"),
             email = $("input[placeholder='Email']"),
             phone = $("input[placeholder='Телефон']"),
-            inpetFile = $("input[type='file']");
+            inpetFile = $("input[type='file']"),
+            responseMessage = $(".styled__TextWrapper-sc-wdjr3h-4");
     private Button acceptCookieButton = new Button("Хорошо", $x("//button[.='Хорошо']"));
     private Button respondButton = new Button("Откликнуться", $x("//button[.='Откликнуться']"));
 
@@ -87,6 +89,12 @@ public class VacansiesPage {
         respondButton.checkThatTheButtonEnabled();
         return this;
     }
+    @Step("проверить, что кнопка Откликнуться доступна для нажатия")
+    public void checkTheResponseMessageOnTheSendedResume(String message) {
+        responseMessage.shouldHave(Condition.text(message));
+    }
+
+
 
 
 }

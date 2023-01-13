@@ -1,5 +1,6 @@
 package sber.rabota.tests;
 
+import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.*;
 import sber.rabota.helpers.TestData;
 import sber.rabota.pages.MainPage;
@@ -43,6 +44,8 @@ public class VacansiesPageTests extends BaseTest {
                 .uploadFile(testData.fileName)
                 .clickOnСheckbox()
                 .checkThatTheRespondButtonEnabled();
-        //.clickOnTheRespondButton();
+                //.clickOnTheRespondButton()
+                //.checkTheResponseMessageOnTheSendedResume("Спасибо за отклик!");
+
     }
 }
