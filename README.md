@@ -88,10 +88,6 @@ allure serve build/allure-results
 
 ## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Видео прохождения теста
 <p align="center">
-<img title="Selenoid Video" src="https://user-images.githubusercontent.com/81707244/212382939-5543536f-eba7-485e-93ac-28f2c69c449e.mp4" width="250" height="153"  alt="video"> 
-  https://user-images.githubusercontent.com/81707244/212386741-cb0dfc30-5734-4d46-8ca8-a7783d7065f3.mp4
+<img title="Selenoid Video" src="https://user-images.githubusercontent.com/81707244/212382939-5543536f-eba7-485e-93ac-28f2c69c449e.mp4" width="250" height="153"  alt="videoUItests.mp4"> 
+
 </p>
-
-
-
-
