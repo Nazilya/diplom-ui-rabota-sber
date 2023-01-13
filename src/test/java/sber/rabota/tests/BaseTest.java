@@ -9,6 +9,7 @@ import sber.rabota.helpers.Attach;
 import sber.rabota.config.WebDriverProvider;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
@@ -29,6 +30,7 @@ public class BaseTest {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        closeWebDriver();
     }
 
 }
