@@ -26,10 +26,11 @@ public class TestData {
             fileName = "files/Rezume.docx";
 
     public String vacancies = "Вакансии",
-            vacanciesTitle = "Поиск вакансий",
+            vacanciesPageTitle = "Поиск вакансий",
             carier = "Карьерные медиа",
-            cariersTitle = "Работа в Сбере: Карьерные медиа",
+            cariersPageTitle = "Работа в Сбере: Карьерные медиа",
             graduate = "Выпускникам и студентам",
-            graduateTitle = "SberGraduate - Твори будущее со Сбером";
+            graduatesPageTitle = "SberGraduate - Твори будущее со Сбером",
+            attributeTitle = "textContent";
 
 }

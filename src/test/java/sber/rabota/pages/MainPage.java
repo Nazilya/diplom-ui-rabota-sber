@@ -3,6 +3,7 @@ package sber.rabota.pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.Assertions;
 import sber.rabota.components.NavMenu;
 import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThanOrEqual;
@@ -16,7 +17,7 @@ public class MainPage {
             logo = $$(".styled__LogoLinkWrapper-sc-119f04f-9");
     private SelenideElement
             logotype = $("styled__HeaderWrapper-sc-s1lnm1-1 "),
-            lastNameInput = $("#lastName");
+            pageTitle = $x("//title");
 
     @Step("открыть страницу")
     public void openPage(String url) {
@@ -55,5 +56,10 @@ public class MainPage {
     public MainPage returnOnMainPage() {
         switchTo().window(getWebDriver().getWindowHandle()).close();
         return this;
+    }
+
+    @Step("проверить заголовок открытой страницы")
+    public void checkTitleOfThePage(String titleName, String attribute) {
+        Assertions.assertEquals(titleName, pageTitle.getAttribute(attribute));
     }
 }

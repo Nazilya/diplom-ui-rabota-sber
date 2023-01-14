@@ -1,5 +1,6 @@
 package sber.rabota.tests;
 
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -51,25 +52,30 @@ public class MainPageTests extends BaseTest {
     @Tag("UITests")
     @DisplayName("Проверка открытия страницы 'Поиск вакансий' по клику на меню")
     void openVacanciesPageTest() {
-        mainPage.clickNavMenuElementByName(testData.vacancies);
-        Assertions.assertEquals(testData.vacanciesTitle, $x("//title").getAttribute("textContent"));
+        mainPage.clickNavMenuElementByName(testData.vacancies)
+                .checkTitleOfThePage(testData.vacanciesPageTitle, testData.attributeTitle);
     }
 
     @Test
     @Tag("UITests")
     @DisplayName("Проверка открытия страницы 'Карьерные медиа' по клику на меню")
     void openCariersPageTest() {
-        mainPage.clickNavMenuElementByName(testData.carier);
-        Assertions.assertEquals(testData.cariersTitle, $x("//title").getAttribute("textContent"));
+        mainPage.clickNavMenuElementByName(testData.carier)
+                .checkTitleOfThePage(testData.cariersPageTitle, testData.attributeTitle);
+        //Assertions.assertEquals(testData.cariersPageTitle, $x("//title").getAttribute("textContent"));
     }
 
     @Test
     @Tag("UITests")
     @DisplayName("Проверка открытия страницы 'Выпускникам и студентам' по клику на меню")
     void openGraduatePageTest() {
-        mainPage.clickNavMenuElementByName(testData.graduate);
-        mainPage.openGraduatesPage();
-        Assertions.assertEquals(testData.graduateTitle, $x("//title").getAttribute("textContent"));
+        mainPage.clickNavMenuElementByName(testData.graduate)
+                .openGraduatesPage()
+                .checkTitleOfThePage(testData.graduatesPageTitle, testData.attributeTitle);
+
+//        Assertions.assertEquals(testData.graduatesPageTitle, $x("//title").getAttribute("textContent"));
     }
+
+
 
 }
