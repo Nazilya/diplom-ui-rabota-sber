@@ -12,6 +12,7 @@
 - Локальный запуск тестов
 - Удаленный запуск - сборка в Jenkins
 - Allure-отчет
+- Интеграция с Allure TestOps
 - Уведомление в Telegram о результатах прогона тестов
 
 ## :maple_leaf:Технологии и инструменты
@@ -87,7 +88,6 @@ allure serve build/allure-results
 </p>
 
 ## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/18382">Allure TestOps</a>
-## :maple_leaf: Интеграция с Allure TestOps
 ### Общий список всех кейсов: ручных и авто
 <p align="center">
 <img title="Allure Graphics" src="images/screens/aluureTO_TK.png">
