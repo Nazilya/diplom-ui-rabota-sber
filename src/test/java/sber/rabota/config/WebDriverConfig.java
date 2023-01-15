@@ -3,7 +3,7 @@ package sber.rabota.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${env}.properties"
+        "classpath:config/${env}.properties"
 })
 public interface WebDriverConfig extends Config {
     @Key("browserName")
