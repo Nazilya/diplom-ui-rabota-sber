@@ -34,7 +34,13 @@
 - [x] Поиск вакансии QA Automation
 - [x] Поиск вакансий (параметризованные тесты)
 - [x] Поиск вакансии с использованием фильтров
-- [x] Заполнение формы для отклика на вакансию
+- [x] Проверка полей формы для отклика на вакансию
+
+## :maple_leaf: Список проверок, реализованных в ручных тестах
+
+- [x] Проверка блока «Наши мероприятия» на главной странице
+- [x] Проверка кликабельности элементов меню в футере на на странице с вакансией
+- [x] Проверка функции отправки резюме недопустимого формата
 
 ## :maple_leaf: Запуск тестов
 
@@ -60,7 +66,7 @@ allure serve build/allure-results
 
 ![This is an image](/images/screens/Jenkins3.png)
 
-## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/10_DikayaAV_diploma/allure/">Allure report</a>
+## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/17/allure/">Allure report</a>
 
 ###  Главное окно
 
@@ -78,6 +84,23 @@ allure serve build/allure-results
 
 <p align="center">
 <img title="Allure Graphics" src="images/screens/Allure_Report3.png">
+</p>
+
+## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/18382">Allure TestOps</a>
+## :maple_leaf: Интеграция с Allure TestOps
+### Общий список всех кейсов: ручных и авто
+<p align="center">
+<img title="Allure Graphics" src="images/screens/aluureTO_TK.png">
+</p>
+
+### Dashboard с общими результатами тестирования
+<p align="center">
+<img title="Allure Graphics" src="images/screens/aluureTO_dashboard.png">
+</p>
+
+### Пример отчёта выполнения одного из автотестов
+<p align="center">
+<img title="Allure Graphics" src="images/screens/allureTO_report.png">
 </p>
 
 ## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Настроено автоматическое оповещение о результатах прогона тестов в Telegram-бот
