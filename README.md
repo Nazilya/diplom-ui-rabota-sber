@@ -1,5 +1,4 @@
 # Проект по автоматизации тестирования (Web UI)
-<a target="_blank" href="https://rabota.sber.ru/">Веб сайт Работа в Сбере</a>
 ### Веб сайт <a target="_blank" href="https://rabota.sber.ru/">Работа в Сбере</a>
 
 <p align="center">
