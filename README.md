@@ -9,7 +9,7 @@
 
 - Технологии и инструменты
 - Список проверок, реализованных в тестах
-- Заапуск тестов (сборка в Jenkins)
+- Запуск тестов (сборка в Jenkins)
 - Allure-отчет
 - Интеграция с Allure TestOps
 - Интеграция с Atlassian Jira
@@ -112,7 +112,7 @@ allure serve build/allure-results
 <img title="Jira" src="images/screens/Jira1.png">
 </p>
 
-## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Настроено автоматическое оповещение о результатах прогона тестов в Telegram-бот
+## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram о результатах прогона тестов
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/telegramNotif.png" >
