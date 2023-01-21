@@ -3,9 +3,11 @@ package sber.rabota.helpers;
 import com.github.javafaker.Faker;
 
 import java.util.List;
+import java.util.Locale;
 
 public class TestData {
-    Faker faker = new Faker();
+    //    Faker faker = new Faker();
+    Faker faker = new Faker(new Locale("ru"));
     public String region = "г Санкт-Петербург",
             regionForSearch = "Санкт-Петербург",
             attribute = "innerText",
