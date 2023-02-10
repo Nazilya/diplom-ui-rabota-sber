@@ -12,7 +12,7 @@ public class TestData {
             regionForSearch = "Санкт-Петербург",
             attribute = "innerText",
             menuElement = "Вакансии",
-            vacanciesUrl = "search/4103204/";
+            vacanciesUrl = "search/4138526/";
     public int logoCount = 2,
             menuElementsCount = 3;
     public static List<String> menuElements =

@@ -1,5 +1,7 @@
 package sber.rabota.tests;
 
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -8,6 +10,7 @@ import sber.rabota.pages.MainPage;
 import sber.rabota.pages.SearchPage;
 import sber.rabota.pages.VacansiesPage;
 
+@Tag("UITests")
 public class SearchPageTests extends BaseTest {
     private MainPage mainPage = new MainPage();
     private SearchPage searchPage = new SearchPage();
@@ -20,7 +23,8 @@ public class SearchPageTests extends BaseTest {
     }
 
     @Test
-    @Tag("UITests")
+    @Owner("Nazilya")
+    @Story("Поиск вакансии")
     @DisplayName("Проверка функции поиска вакансий по регионам")
     void checkVacanciesSearchResultsByRegionsTest() {
         searchPage.clickClearButton()
@@ -30,7 +34,8 @@ public class SearchPageTests extends BaseTest {
     }
 
     @Test
-    @Tag("UITests")
+    @Owner("Nazilya")
+    @Story("Поиск вакансии")
     @DisplayName("Проверка функции поиска и наличия вакансий для людей с инвалидностью")
     void checkVacanciesSearchResultsForHandicappedTest() {
         searchPage.clickClearButton()
@@ -39,9 +44,10 @@ public class SearchPageTests extends BaseTest {
                 .checkThatTheSignsForHandicappedInVacanciesArePresent();
     }
 
+    @Owner("Nazilya")
+    @Story("Поиск вакансии")
     @CsvFileSource(resources = "/files/searchResult.csv")
     @ParameterizedTest(name = "{1} при поиске вакансии {0}")
-    @Tag("UITests")
     @DisplayName("Проверка функции поиска вакансий и результатов поиска")
     void checkVacansySearchResultsTest(String vacansy, String searchesResult) {
         searchPage.clickClearButton()

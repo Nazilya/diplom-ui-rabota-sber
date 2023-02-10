@@ -62,3 +62,8 @@ task ui_tests(type: Test) {
         includeTags "UITests"
     }
 }
+task ui(type: Test) {
+    useJUnitPlatform {
+        includeTags "Ui"
+    }
+}

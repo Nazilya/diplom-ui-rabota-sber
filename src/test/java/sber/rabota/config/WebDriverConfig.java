@@ -22,4 +22,9 @@ public interface WebDriverConfig extends Config {
 
     @Key("remoteUrl")
     String getRemoteUrl();
+
+    @Key("user")
+    String user();
+    @Key("password")
+    String password();
 }

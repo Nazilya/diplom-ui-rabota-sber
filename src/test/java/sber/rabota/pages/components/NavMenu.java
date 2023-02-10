@@ -1,4 +1,4 @@
-package sber.rabota.components;
+package sber.rabota.pages.components;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
