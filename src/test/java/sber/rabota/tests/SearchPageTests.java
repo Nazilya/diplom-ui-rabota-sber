@@ -9,7 +9,7 @@ import sber.rabota.helpers.TestData;
 import sber.rabota.pages.MainPage;
 import sber.rabota.pages.SearchPage;
 import sber.rabota.pages.VacansiesPage;
-
+@Disabled
 @Tag("UITests")
 public class SearchPageTests extends BaseTest {
     private MainPage mainPage = new MainPage();

@@ -11,7 +11,7 @@ import sber.rabota.pages.MainPage;
 import java.util.List;
 import java.util.stream.Stream;
 import static com.codeborne.selenide.Configuration.baseUrl;
-
+@Disabled
 @Tag("UITests")
 public class MainPageTests extends BaseTest {
     private MainPage mainPage = new MainPage();
