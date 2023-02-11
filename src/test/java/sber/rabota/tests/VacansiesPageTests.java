@@ -34,7 +34,6 @@ public class VacansiesPageTests extends BaseTest {
                 .checkErrorMessages(errorTexts);
 
     }
-    @Disabled
     @Test
     @Owner("Nazilya")
     @Story("Отклик на вакансию")
