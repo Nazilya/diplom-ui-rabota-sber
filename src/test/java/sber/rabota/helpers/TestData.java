@@ -7,7 +7,7 @@ import java.util.Locale;
 
 public class TestData {
     Faker fakerEn = new Faker();
-    Faker faker = new Faker(new Locale("ru"));
+    Faker fakerRU = new Faker(new Locale("ru"));
     public String region = "г Санкт-Петербург",
             regionForSearch = "Санкт-Петербург",
             attribute = "innerText",
@@ -21,10 +21,10 @@ public class TestData {
     public static List<String> errorTexts =
             List.of("Обязательное поле ", "Обязательное поле ", "Проверьте адрес", "Это не похоже на номер телефона");
 
-    public String lastName = faker.name().lastName(),
-            firstName = faker.name().firstName(),
+    public String lastName = fakerRU.name().lastName(),
+            firstName = fakerRU.name().firstName(),
             email = fakerEn.internet().emailAddress(),
-            phone = faker.phoneNumber().subscriberNumber(10),
+            phone = fakerRU.phoneNumber().subscriberNumber(10),
             fileName = "files/Rezume.docx";
 
     public String vacancies = "Вакансии",

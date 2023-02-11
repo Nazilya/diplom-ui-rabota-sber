@@ -67,7 +67,6 @@ public class MainPageTests extends BaseTest {
     }
 
     @Test
-    @Tag("Ui")
     @Owner("Nazilya")
     @Story("открытие страницы")
     @DisplayName("Проверка открытия страницы 'Выпускникам и студентам' по клику на меню")
