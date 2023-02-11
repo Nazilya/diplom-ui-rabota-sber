@@ -94,17 +94,17 @@ allure serve build/allure-results
 ## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/18382">Allure TestOps</a>
 ### Общий список всех кейсов: ручных и авто
 <p align="center">
-<img title="Allure Graphics" src="images/screens/aluureTO_TK.png">
+<img title="Allure Graphics" src="images/screens/aluureTO-TK.png">
 </p>
 
 ### Dashboard с общими результатами тестирования
 <p align="center">
-<img title="Allure Graphics" src="images/screens/aluureTO_dashboard.png">
+<img title="Allure Graphics" src="images/screens/allureTO_dashboard.png">
 </p>
 
 ### Пример отчёта выполнения одного из автотестов
 <p align="center">
-<img title="Allure Graphics" src="images/screens/allureTO_report.png">
+<img title="Allure Graphics" src="images/screens/allureTO-report.png">
 </p>
 
 ## <img src="images/logo/jira-logo.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-502">Atlassian Jira</a>
