@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class TestData {
-    //    Faker faker = new Faker();
+    Faker fakerEn = new Faker();
     Faker faker = new Faker(new Locale("ru"));
     public String region = "г Санкт-Петербург",
             regionForSearch = "Санкт-Петербург",
@@ -23,7 +23,7 @@ public class TestData {
 
     public String lastName = faker.name().lastName(),
             firstName = faker.name().firstName(),
-            email = faker.internet().emailAddress(),
+            email = fakerEn.internet().emailAddress(),
             phone = faker.phoneNumber().subscriberNumber(10),
             fileName = "files/Rezume.docx";
 
