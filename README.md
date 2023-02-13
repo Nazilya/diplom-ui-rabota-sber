@@ -2,7 +2,7 @@
 ### Веб сайт <a target="_blank" href="https://rabota.sber.ru/">Работа в Сбере</a>
 
 <p align="center">
-<img title="Allure Graphics" src="images/screens/sberRabota.png">
+<img title="Работа в Сбере" src="images/screens/sberRabota.png">
 </p>
 
 ## :maple_leaf: Содержание:
