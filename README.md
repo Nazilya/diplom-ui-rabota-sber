@@ -59,14 +59,14 @@ allure serve build/allure-results
 ```
 
 ###  Удаленный запуск (в Jenkins):
-### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/">проект</a>
+1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C16-NazilyaMullagildina_UI-tests/">проект</a>
 
 ![This is an image](/images/screens/Jenkins1.png)
 
-### 2. Выбрать пункт **Собрать с параметрами**
-### 3. В случае необходимости изменить параметры, выбрав значения из выпадающих списков
-### 4. Нажать **Собрать**
-### 5. Результат запуска сборки можно посмотреть в отчёте Allure
+2. Выбрать пункт **Собрать с параметрами**
+3. В случае необходимости изменить параметры, выбрав значения из выпадающих списков
+4. Нажать **Собрать**
+5. Результат запуска сборки можно посмотреть в отчёте Allure
 
 ![This is an image](/images/screens/Jenkins3.png)
 
