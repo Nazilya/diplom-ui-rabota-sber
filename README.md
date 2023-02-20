@@ -119,7 +119,7 @@ allure serve build/allure-results
 <img title="Allure Overview Dashboard" src="images/screens/telegramNotif.png" >
 </p>
 
-## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Видео прохождения тестов
+## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Selenoid"/></a> Видео прохождения тестов
 <p align="center">
 <img src="/images/video/videoUItests.gif" alt="video"/></a>
 </p>
