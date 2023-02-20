@@ -17,7 +17,7 @@
 - Уведомление в Telegram о результатах прогона тестов
 - Видео пример прохождения тестов
 
-## :maple_leaf:Технологии и инструменты
+## :maple_leaf: Технологии и инструменты
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
