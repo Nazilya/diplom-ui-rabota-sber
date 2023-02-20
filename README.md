@@ -1,4 +1,5 @@
 ## Учебный проект по автоматизации тестирования (Web UI)
+<a name="Ссылка"></a>
 ### Веб сайт <a target="_blank" href="https://rabota.sber.ru/">Работа в Сбере</a>
 
 <p align="center">
@@ -122,3 +123,5 @@ allure serve build/allure-results
 <p align="center">
 <img src="/images/video/videoUItests.gif" alt="video"/></a>
 </p>
+
+[Вернуться к оглавлению ⬆](#Ссылка)
