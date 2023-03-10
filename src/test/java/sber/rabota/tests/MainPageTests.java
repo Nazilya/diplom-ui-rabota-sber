@@ -11,73 +11,54 @@ import sber.rabota.pages.MainPage;
 import java.util.List;
 import java.util.stream.Stream;
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static sber.rabota.helpers.TestData.*;
 
+@Owner("Nazilya")
 @Tag("UITests")
 public class MainPageTests extends BaseTest {
-    private MainPage mainPage = new MainPage();
-    private static TestData testData = new TestData();
-
     @BeforeEach
     void openMainPage() {
         mainPage.openPage(baseUrl);
     }
-    @Test
-    @Owner("Nazilya")
     @Story("Главная страница")
     @DisplayName("Проверка наличия логотипов на главной странице")
+    @Test
     void checkLogoTest() {
         mainPage
-                .checkLogo(testData.logoCount);
+                .checkLogo(logoCount);
     }
 
-    static Stream<Arguments> checkNavMenuButtonsTest() {
-        return Stream.of(
-                Arguments.of(testData.menuElementsCount, TestData.menuElements)
-        );
-    }
-
-    @MethodSource
-    @ParameterizedTest(name = "Проверка наличия кнопок {1} в меню и их общее кол-во {0}")
-    @Owner("Nazilya")
     @Story("Меню")
     @DisplayName("Проверка меню на главной странице")
-    void checkNavMenuButtonsTest(int count, List<String> menuElements) {
-        mainPage
-                .checkNavMenuElementsCount(count)
-                .checkNavMenuElements(menuElements);
-    }
-
     @Test
-    @Owner("Nazilya")
+    void checkNavMenuButtonsTest() {
+        mainPage
+                .checkNavMenuElementsCount(menuElementsCount)
+                .checkNavMenuElements(TestData.menuElements);
+    }
     @Story("открытие страницы")
     @DisplayName("Проверка открытия страницы 'Поиск вакансий' по клику на меню")
+    @Test
     void openVacanciesPageTest() {
-        mainPage.clickNavMenuElementByName(testData.vacancies)
-                .checkTitleOfThePage(testData.vacanciesPageTitle, testData.attributeTitle);
+        mainPage.clickNavMenuElementByName(vacancies)
+                .checkTitleOfThePage(vacanciesPageTitle, attributeTitle);
     }
 
-    @Test
-    @Owner("Nazilya")
     @Story("открытие страницы")
     @DisplayName("Проверка открытия страницы 'Карьерные медиа' по клику на меню")
+    @Test
     void openCariersPageTest() {
-        mainPage.clickNavMenuElementByName(testData.carier)
-                .checkTitleOfThePage(testData.cariersPageTitle, testData.attributeTitle);
-        //Assertions.assertEquals(testData.cariersPageTitle, $x("//title").getAttribute("textContent"));
+        mainPage.clickNavMenuElementByName(carier)
+                .checkTitleOfThePage(cariersPageTitle, attributeTitle);
     }
 
-    @Test
-    @Owner("Nazilya")
     @Story("открытие страницы")
     @DisplayName("Проверка открытия страницы 'Выпускникам и студентам' по клику на меню")
+    @Test
     void openGraduatePageTest() {
-        mainPage.clickNavMenuElementByName(testData.graduate)
+        mainPage.clickNavMenuElementByName(graduate)
                 .openGraduatesPage()
-                .checkTitleOfThePage(testData.graduatesPageTitle, testData.attributeTitle);
-
-//        Assertions.assertEquals(testData.graduatesPageTitle, $x("//title").getAttribute("textContent"));
+                .checkTitleOfThePage(graduatesPageTitle, attributeTitle);
     }
-
-
 
 }

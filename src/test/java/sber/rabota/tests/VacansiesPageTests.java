@@ -9,36 +9,30 @@ import sber.rabota.pages.SearchPage;
 import sber.rabota.pages.VacansiesPage;
 import static com.codeborne.selenide.Selenide.*;
 import static sber.rabota.helpers.TestData.errorTexts;
+import static sber.rabota.helpers.TestData.vacanciesUrl;
 
+@Owner("Nazilya")
 @Tag("UITests")
 public class VacansiesPageTests extends BaseTest {
-    private MainPage mainPage = new MainPage();
-    private SearchPage searchPage = new SearchPage();
-    private VacansiesPage vacansiesPage = new VacansiesPage();
-    private TestData testData = new TestData();
-
     @BeforeEach
     void openVacanciesSearchPage() {
-        open(testData.vacanciesUrl);
+        open(vacanciesUrl);
     }
-
-    @Test
-    @Owner("Nazilya")
     @Story("Отклик на вакансию")
     @DisplayName("Проверка валидации полей при отклике на вакансию")
+    @Test
     void checkFieldsValidationTest() {
         vacansiesPage.clickOnCookiesButton()
-                .clickOnСheckbox()
+                .clickOnDataProcessingConsentСheckbox()
                 .checkThatTheRespondButtonEnabled()
                 .clickOnTheRespondButton()
-                .checkErrorMessages(errorTexts);
+                .checkValidationOfFieldsWithEmptyValues(errorTexts);
 
     }
-    @Test
-    @Owner("Nazilya")
     @Story("Отклик на вакансию")
 //    @JiraIssues(@JiraIssue("AE-1"))
     @DisplayName("Проверка функции отклика на вакансию и отправки резюме")
+    @Test
     void fillVacanciesFormTest() {
         vacansiesPage
                 .fillLastNameField(testData.lastName)
@@ -46,10 +40,9 @@ public class VacansiesPageTests extends BaseTest {
                 .fillEmailField(testData.email)
                 .fillPhoneField(testData.phone)
                 .uploadFile(testData.fileName)
-                .clickOnСheckbox()
+                .clickOnDataProcessingConsentСheckbox()
                 .checkThatTheRespondButtonEnabled();
                 //.clickOnTheRespondButton()
                 //.checkTheResponseMessageOnTheSendedResume("Спасибо за отклик!");
-
     }
 }

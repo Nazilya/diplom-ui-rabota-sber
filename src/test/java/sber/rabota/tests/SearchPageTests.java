@@ -10,33 +10,28 @@ import sber.rabota.pages.MainPage;
 import sber.rabota.pages.SearchPage;
 import sber.rabota.pages.VacansiesPage;
 
+import static sber.rabota.helpers.TestData.*;
+@Owner("Nazilya")
 @Tag("UITests")
 public class SearchPageTests extends BaseTest {
-    private MainPage mainPage = new MainPage();
-    private SearchPage searchPage = new SearchPage();
-    private VacansiesPage vacansiesPage = new VacansiesPage();
-    private TestData testData = new TestData();
-
     @BeforeEach
     void openSearchPage() {
-        mainPage.clickNavMenuElementByName(testData.menuElement);
+        mainPage.clickNavMenuElementByName(menuElement);
     }
 
-    @Test
-    @Owner("Nazilya")
     @Story("Поиск вакансии")
     @DisplayName("Проверка функции поиска вакансий по регионам")
+    @Test
     void checkVacanciesSearchResultsByRegionsTest() {
         searchPage.clickClearButton()
-                .fillFieldRegion(testData.regionForSearch)
+                .fillFieldRegion(regionForSearch)
                 .selectRegion()
-                .checkRegion(testData.attribute, testData.region);
+                .checkRegion(attribute, region);
     }
 
-    @Test
-    @Owner("Nazilya")
     @Story("Поиск вакансии")
     @DisplayName("Проверка функции поиска и наличия вакансий для людей с инвалидностью")
+    @Test
     void checkVacanciesSearchResultsForHandicappedTest() {
         searchPage.clickClearButton()
                 .clickAccessibleForHandicappedFlag()
@@ -44,11 +39,10 @@ public class SearchPageTests extends BaseTest {
                 .checkThatTheSignsForHandicappedInVacanciesArePresent();
     }
 
-    @Owner("Nazilya")
     @Story("Поиск вакансии")
     @CsvFileSource(resources = "/files/searchResult.csv")
-    @ParameterizedTest(name = "{1} при поиске вакансии {0}")
     @DisplayName("Проверка функции поиска вакансий и результатов поиска")
+    @ParameterizedTest(name = "{1} при поиске вакансии {0}")
     void checkVacansySearchResultsTest(String vacansy, String searchesResult) {
         searchPage.clickClearButton()
                 .fillSearchField(vacansy)

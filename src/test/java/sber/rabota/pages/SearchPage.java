@@ -13,8 +13,6 @@ public class SearchPage {
             searchResultMessage = $(".styled__ListColumn-sc-76mli3-3").$("div"),
             regionInput = $x("//input[@placeholder='Город/регион']"),
             checkboxForHandicapped = $x("//input[@id='vacancy-search-filter-accept-handicapped-flag']/ancestor::label"),
-                    //$("#vacancy-search-filter-accept-handicapped-flag").parent(),
-
             acceptHandicappedSign = $(".styled__IconWrapper-sc-19xh0mp-3"),
             regionInVacansi = $(".styled__ListColumn-sc-76mli3-3  div.styled__Content-sc-19xh0mp-1").$("div"),
             inputField = $("input");

@@ -15,9 +15,7 @@ public class MainPage {
     private NavMenu menu = new NavMenu();
     private ElementsCollection menuElements = $$(".styled__HeaderLinkWrapper-sc-s1lnm1-4"), //их 3 -  список элементов меню
             logo = $$(".styled__LogoLinkWrapper-sc-119f04f-9");
-    private SelenideElement
-            logotype = $("styled__HeaderWrapper-sc-s1lnm1-1 "),
-            pageTitle = $x("//title");
+    private SelenideElement pageTitle = $x("//title");
 
     @Step("открыть страницу")
     public void openPage(String url) {

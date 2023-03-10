@@ -18,4 +18,5 @@ public class Button {
     public void checkThatTheButtonEnabled() {
         selector.shouldBe(enabled);
     }
+
 }
